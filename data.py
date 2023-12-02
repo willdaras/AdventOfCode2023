@@ -3,5 +3,5 @@ def get_input(day: int) -> str:
     for data in raw_data.split('[day'):
         if data == '':
             continue
-        if data.count(f'{day}]') > 0:
+        if data.startswith(f'{day}]'):
             return data.removeprefix(f'{day}]')
